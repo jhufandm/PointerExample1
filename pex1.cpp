@@ -34,7 +34,7 @@ int main(){
     int numStudents;
     cout<<"How many students in your class:";
     cin>>numStudents;
-    scores = new float(numStudents); //dynamically allocate enough memmory to hold
+    scores = new float[numStudents]; //dynamically allocate enough memmory to hold
 
     for (int i=0;i<numStudents; i++){
         cout<<"student "<<i+1<<": ";
@@ -48,7 +48,7 @@ int main(){
     cout<<"We have more students joined the class!"<<endl;
     float* newScores = nullptr;
     //dynamically allocate another array with double the size
-    newScores = new float(2*numStudents); 
+    newScores = new float[2*numStudents]; 
     //Copy everything from the old array to the new array
     for (int i=0;i<numStudents;i++){
         newScores[i] = scores[i];
